@@ -4,7 +4,7 @@ angular.module("app").controller("MainController", function() {
     var vm = this ;
     vm.title = " Learn Angular bu example";
     vm.searchInput = "";
-    vm.show = [
+    vm.shows = [
         {
             title: "Đôi mắt có lửa",
             author : "Nguyễn Hùng Sơn",
