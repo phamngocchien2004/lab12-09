@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+ 
+  .main{
+    width: 500px;
+    text-align: center;
+    border: 2px solid #d7d7d7;
+    font-family: sans-serif;
+    border-radius: 10px;
+  }
+ 
+  h1{
+    text-align: center;
+    background-color: #d4d4d4;
+    padding: 30px 0;
+    margin-top: 0;
+  }
+ 
+  ul{
+    list-style: none;
+    font-size: 20px;
+    color: #686868;
+    margin-left: -40px;
+    margin-bottom: 0;
+  }
+ 
+  li{
+    border-bottom: 1px solid #ededed;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+ 
+  li span{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-right: 30px;
+  }
+ 
+  .addItem{
+    position: relative;
+    padding-bottom: 0;
+    height: 30px;
+  }
+ 
+  .addText{
+    width: 80%;
+    height: 30px;
+  }
+ 
+  .addItem button{
+    height: 35px;
+    width: 50px;
+  }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main"  ng-app="Mylist" ng-controller="myListController">
+        <h1>Item list</h1>
+        <div class="addItem">
+            <input type="text" ng-model="newItem" placeholder="Add Item" class="addText">
+            <button ng-click="pushItem()">Add</button>
+        </div>
+<ul>
+        <li ng-repeat="i in items"> {{ i }}     <span ng-click="deleteItem($index)   "     >x</span></li>
+</ul>
+    </div>
+
+
+
+    <script src="/index5.js"></script>
+</body>
+</html>
